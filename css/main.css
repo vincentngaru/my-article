@@ -1,0 +1,114 @@
+/* ========================================
+Css
+ * ======================================== */
+html {
+  color: #444;
+  font-family: Gotham, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+/* Styling of the entire container. Split into three-column grid */
+.content {
+  display: grid;
+  max-width: 1300px;
+  margin: 5px auto;
+  grid-gap: 10px 50px;
+  grid-template-columns: 3fr 15fr 4fr;
+}
+
+p {
+  line-height: 1.8;
+}
+h1 {
+  font-family: Playfair display, Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+img {
+  margin: 0;
+  max-width: 100%;
+}
+body {
+  padding: 20px 0;
+}
+
+.content > * {
+  grid-column: 2/span 1;
+}
+
+.cover-image {
+  display: block;
+  max-width: 100%;
+  grid-column: 1/-1;
+  margin-bottom: 1.5rem;
+}
+.image-2 {
+  align-items: start;
+  grid-column: 2/2;
+}
+.image-3 {
+  margin: 0;
+  grid-column: 2/2;
+}
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  max-width: 400px;
+  margin-top: 0;
+  padding: 10px;
+  background-color: lightblue;
+  justify: Center;
+}
+.content > blockquote {
+  font-size: 50px;
+  border-bottom: solid 6px red;
+  border-top: solid 6px red;
+  grid-column: 2/2;
+  font-weight: bold;
+  text-align: center;
+
+  margin: 0;
+}
+blockquote > p {
+  line-height: 1.2;
+  font-family: Playfair display, Gotham Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+  p {
+    line-height: 1.6;
+  }
+
+  .image-2 {
+    align-items: start;
+    grid-column: 1/-1;
+  }
+  .image-3 {
+    margin: 0;
+    grid-column: 1/-1;
+  }
+  figcaption {
+    font-size: 8px;
+  }
+
+  .content > blockquote {
+    font-family: Playfair display, Gotham Georgia, "Times New Roman", Times,
+      serif;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    grid-column: 1/-1;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 21px;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 60fr 1fr;
+    padding: 0px;
+  }
+}
