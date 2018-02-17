@@ -116,4 +116,9 @@ blockquote > p {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  h1 {
+    padding: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
