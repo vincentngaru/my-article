@@ -5,13 +5,12 @@ html {
   color: #444;
   font-family: Gotham, Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: 100;
 }
 /* Styling of the entire container. Split into three-column grid */
 .content {
   display: grid;
-  max-width: 1300px;
-  margin: 5px auto;
+  margin: 5px 0;
   grid-gap: 10px 50px;
   grid-template-columns: 3fr 15fr 4fr;
 }
@@ -22,6 +21,8 @@ p {
 h1 {
   font-family: Playfair display, Georgia, "Times New Roman", Times, serif;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 img {
   margin: 0;
@@ -37,9 +38,13 @@ body {
 
 .cover-image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   grid-column: 1/-1;
+  margin: 0;
   margin-bottom: 1.5rem;
+}
+figure {
+  margin: 0;
 }
 .image-2 {
   align-items: start;
@@ -84,14 +89,10 @@ blockquote > p {
     line-height: 1.6;
   }
 
-  .image-2 {
-    align-items: start;
-    grid-column: 1/-1;
-  }
-  .image-3 {
+  figure {
     margin: 0;
-    grid-column: 1/-1;
   }
+
   figcaption {
     font-size: 8px;
   }
@@ -103,13 +104,16 @@ blockquote > p {
     font-weight: lighter;
     text-align: center;
     grid-column: 1/-1;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 21px;
   }
   .content {
-    display: grid;
-    grid-template-columns: 1fr 60fr 1fr;
-    padding: 0px;
+    display: block;
+  }
+  .content * p {
+    padding: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
